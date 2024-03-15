@@ -18,44 +18,37 @@ public:
 	void revise_Phone(string newPhone);
 
 	void show() override;
+
+	const char* serialize() override {
+		std::string total_buffer;
+		total_buffer = total_buffer.append(to_string(id)).append(separator)
+			.append(TpyeName).append(separator)
+			.append(authority).append(separator)
+
+			.append(UserName).append(separator)
+			.append(Password).append(separator)
+			.append(Phone).append(separator);
+
+		char* result = new char[total_buffer.length() + 1];
+		std::strcpy(result, total_buffer.c_str());
+
+		return result;
+	}
+	;
+	void deserialize(const char* data) override {
+		try {
+			auto result = splitString(data, separator);
+			this->id = std::stoi(result[0]);
+			this->TpyeName = result[1];
+			this->authority = result[2];
+			this->UserName = result[3];
+			this->Password = result[4];
+			this->Phone = result[5];
+		}
+		catch (const char* what) {
+			cerr << endl << "Something went wrong...\n" << what << endl << endl;
+		}
+		
+	};
 };
 
-void general::revise_UserName(string newName)
-{
-	UserName = newName;
-}
-void general::revise_Password(string newPwold)
-{
-	Password = newPwold;
-}
-void general::revise_Phone(string newPhone)
-{
-	Phone = newPhone;
-}
-void general::show ()
-{
-	if(UserName != "")
-	cout << id << "\t" << UserName
-		<< "\t" << Phone << "\t" << IsStop
-		<< "\t" << TpyeName << "\t" << authority
-		<< endl;
-}
-
-//
-//bool isEmpty(user *a)
-//{
-//	if (a->UserName == "")
-//		return true;
-//	return false;
-//}
-//
-//int findIndex(int id)
-//{
-//	for (int i = 0; i < size(generalUser); i++)
-//	{
-//		if (generalUser[i].id == id)
-//			return i;
-//	}
-//	cout << "未找到此用户";
-//	return -1;
-//}

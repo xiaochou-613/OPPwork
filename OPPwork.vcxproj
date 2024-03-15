@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,18 +130,28 @@
   <ItemGroup>
     <ClInclude Include="admin.h" />
     <ClInclude Include="function.h" />
+    <ClInclude Include="IOManager.h" />
     <ClInclude Include="logn.h" />
     <ClInclude Include="official.h" />
     <ClInclude Include="general.h" />
     <ClInclude Include="print.h" />
+    <ClInclude Include="Serializable.h" />
     <ClInclude Include="SignIn.h" />
+    <ClInclude Include="Storage.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="function.cpp" />
+    <ClCompile Include="general.cpp" />
+    <ClCompile Include="IOManager.cpp" />
+    <ClCompile Include="official.cpp" />
+    <ClCompile Include="Serializable.cpp" />
     <ClCompile Include="sign_in.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print.cpp" />
+    <ClCompile Include="Storage.cpp" />
+    <ClCompile Include="user.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
