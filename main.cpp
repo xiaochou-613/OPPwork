@@ -2,7 +2,7 @@
 //#include "print.h"
 //#include "logn.h"
 //int display(string authority);
-#include "function.h"
+#include "Storage.h"
 /**
 -用户管理系统
 要求：  
@@ -20,15 +20,18 @@
 2) 使用继承、对象成员（用户类型）  超级管理员能查看和分页欣赏普遍用户与管理员用户。
 */
 
-void main()
+int main()
 {
 	data();
-	//登录成功
-	int userIndex = lognIn();
-	if (userIndex == -1)return;
+	Storage::continueSaveAll();
+	////登录成功
+	//int userIndex = lognIn();
+	//if (userIndex == -1)return;
 
-	while(1)
-		useAuthority(display(userIndex),userIndex);
+	//while(1)
+	//	useAuthority(display(userIndex),userIndex);
+	//	
+
 }
 
 //int display(string authority)

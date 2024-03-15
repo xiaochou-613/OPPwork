@@ -13,8 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\class">
+    <Filter Include="头文件\IO">
+      <UniqueIdentifier>{769041ff-1c7d-42d3-8f28-8b246d016217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\IO">
+      <UniqueIdentifier>{1525a100-9443-4b7c-b83d-9fb39c88f00f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\entity">
       <UniqueIdentifier>{84e15ec0-5370-43b7-883e-b4cea2647f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\entity">
+      <UniqueIdentifier>{bf24b70e-18c4-436e-a6f3-754408ac4adb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,19 +37,28 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="user.h">
-      <Filter>头文件\class</Filter>
+      <Filter>头文件\entity</Filter>
     </ClInclude>
     <ClInclude Include="general.h">
-      <Filter>头文件\class</Filter>
+      <Filter>头文件\entity</Filter>
     </ClInclude>
     <ClInclude Include="official.h">
-      <Filter>头文件\class</Filter>
+      <Filter>头文件\entity</Filter>
     </ClInclude>
     <ClInclude Include="admin.h">
-      <Filter>头文件\class</Filter>
+      <Filter>头文件\entity</Filter>
     </ClInclude>
     <ClInclude Include="function.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializable.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IOManager.h">
+      <Filter>头文件\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage.h">
+      <Filter>头文件\IO</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +73,27 @@
     </ClCompile>
     <ClCompile Include="function.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Serializable.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IOManager.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage.cpp">
+      <Filter>源文件\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>源文件\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="official.cpp">
+      <Filter>源文件\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="general.cpp">
+      <Filter>源文件\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="admin.cpp">
+      <Filter>源文件\entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
